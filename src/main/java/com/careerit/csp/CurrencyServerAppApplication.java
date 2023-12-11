@@ -1,21 +1,22 @@
 package com.careerit.csp;
 
-import lombok.extern.slf4j.Slf4j;
+import com.careerit.csp.service.CurrencyService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@Slf4j
+@RequiredArgsConstructor
 public class CurrencyServerAppApplication implements CommandLineRunner {
 
-
+	private final CurrencyService currencyService;
 	public static void main(String[] args) {
 		SpringApplication.run(CurrencyServerAppApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		log.info("Application started successfully");
+
 	}
 }

@@ -29,7 +29,6 @@ public class CurrencyService {
                         Currency currency = objectMapper.convertValue(jsonNode, Currency.class);
                         currencyMap.put(currency.code(), currency);
                     });
-
         } catch (Exception e) {
            log.error("Error while loading currencies : {}",e.getMessage());
         }
